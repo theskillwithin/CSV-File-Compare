@@ -24,7 +24,18 @@
 <div class="row text-left">
 <h1 class="text-center">Free Gifts Report</h1>
 
+
+
+
 <?php
+
+
+
+
+
+
+
+
 echo "<table class=\"table table-striped table-bordered\" id=\"thetable\">";
 echo "<tr>";
 echo "<th>Code</th> <th>Description</th> <th>Qty</th> <th>Cost</th> <th>Totals</th>";
