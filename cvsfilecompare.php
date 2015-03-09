@@ -40,7 +40,21 @@ echo "<table class=\"table table-striped table-bordered\" id=\"thetable\">";
 echo "<tr>";
 echo "<th>Code</th> <th>Description</th> <th>Qty</th> <th>Cost</th> <th>Totals</th>";
 echo "</tr>";
-$file = file('test.csv');
+
+$files = glob("*.csv");
+echo "<form action='cvsfilecompare.php' method='post'> <select name='csv'>";
+foreach($files as $filepath) {
+	if ($filepath != 'refrence.csv') {
+  echo "<option value='" . $filepath . "'>" . $filepath . "</option>";
+	}
+}
+echo "<input type='submit'>";
+echo "</select> </form>";
+echo "\n";
+echo "Post value: ";
+echo $_POST['csv'];
+
+$file = file( $_POST['csv'] );
 
 $file2 = file('refrence.csv');
 
